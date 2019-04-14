@@ -6,9 +6,18 @@ class ArticlesController < ApplicationController
         render json: @articles
     end
 
-    
+    def create
+        @article = Article.create(article_params)
+        render json: @article
+    end
 
 
 
+
+    private
+
+    def article_params
+        params.require(:article).permit(:category, :url, :author, :title, :urgency, :read, :summary)
+    end
 
 end

@@ -6,7 +6,8 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.string :url
       t.string :title
       t.string :urgency
-      t.boolean :read , default: false
+      t.string :read
+      t.text :summary 
 
       t.timestamps
     end

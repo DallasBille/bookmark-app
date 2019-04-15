@@ -11,6 +11,18 @@ class ArticlesController < ApplicationController
         render json: @article
     end
 
+    def destroy
+        @article = Article.find(params[:id])
+        @article.destroy
+        render json: @articles
+    end
+
+    def update
+        @article = Article.find(params[:id])
+        @article.update(article_params)
+        render json: @article
+    end
+
 
 
 

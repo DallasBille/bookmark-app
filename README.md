@@ -1,24 +1,30 @@
-# README
+## About Markador:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Markador is a web article/blog post bookmarking tool. With it, you can upload articles from around the web into one interface. This consolidates different articles and allows you to organize them in a multitiude of ways, as well as allows you to add notes after reading them.
 
-Things you may want to cover:
+## Motivation:
 
-* Ruby version
+After growing sick of chrome's bookmark tool and lack of customization, I whipped up a five day React and Rails prototype of a tool that will help you organize your blog articles, and allow you to add notes to articles you have read, and creates a more personal UX than chrome bookmark's.
 
-* System dependencies
+## Technologies:
 
-* Configuration
+Markador uses a Rails backend API that is consumed by a React front end, and is used with a Postgres DB.
 
-* Database creation
+## Front End:
 
-* Database initialization
+https://github.com/DallasBille/bookmark-app-front-end/tree/dallas
 
-* How to run the test suite
+## Set Up:
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Clone Repo.
+2. bundle install.
+3. rails db:migrate
+4. rails db:seed
+5. rails s
 
-* Deployment instructions
+This will open up a localhost with our JSON. Make sure you download the front end so you can interact!
 
-* ...
+## To Dos:
+
+1. Create a user model with login.
+2. Set up active storage so articles can have a photo attached.
